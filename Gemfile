@@ -6,7 +6,7 @@ gem 'rails', '4.1.8'
 gem 'pg', '0.15.1'
 
 group :development, :test do   
-  gem 'rspec-rails', '2.9.0'
+  gem 'rspec-rails', '~>3.0'
 end
   
 group :assets do
@@ -16,7 +16,7 @@ group :assets do
 end
 
 group :test do
-  gem 'capybara', '1.1.2'
+  gem 'capybara', '>=2.2.0'
 end
 
 group :development do
