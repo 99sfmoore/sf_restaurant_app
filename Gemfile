@@ -3,9 +3,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
+gem 'pg', '0.15.1'
 
 group :development, :test do   
-  gem 'pg', '0.12.2'
   gem 'rspec-rails', '2.9.0'
 end
   
@@ -17,10 +17,6 @@ end
 
 group :test do
   gem 'capybara', '1.1.2'
-end
-
-group :production do
-  gem 'pg', '0.12.2'
 end
 
 group :development do
