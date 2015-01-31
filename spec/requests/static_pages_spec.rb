@@ -2,44 +2,40 @@ require 'rails_helper'
 
 describe "StaticPages" do
 
-
-
   describe "Home Page" do
+    before {visit root_path}
 
-    it "should have the content 'Restaurant App'" do
-      visit '/static_pages/home'
+    it "has the content 'Restaurant App'" do
       expect(page).to have_content('Restaurant App')
     end
 
-    it "should have the right title" do
-      visit '/static_pages/home'
-      expect(page).to have_title("Restaurant App | Home")
+    it "has the right title" do
+      expect(page).to have_title(full_title(""))
     end
   end
 
   describe "Help Page" do
+    before {visit help_path}
 
-    it "should have the content 'Help'" do
-      visit '/static_pages/help'
+    it "has the content 'Help'" do
       expect(page).to have_content('Help')
     end
 
-    it "should have the right title" do
-      visit '/static_pages/help'
-      expect(page).to have_title("Restaurant App | Help")
+    it "has the right title" do
+      expect(page).to have_title(full_title("Help"))
     end
   end
 
   describe "About Page" do
+    before {visit about_path}
 
-    it "should have the content 'About'" do
-      visit '/static_pages/about'
+    it "has the content 'About'" do
       expect(page).to have_content('About')
     end
 
-    it "should have the right title" do
-      visit '/static_pages/about'
-      expect(page).to have_title("Restaurant App | About")
+    it "has the right title" do
+      expect(page).to have_title(full_title("About"))
     end
   end
 end
+
