@@ -17,10 +17,13 @@ end
 
 group :test do
   gem 'capybara', '>=2.2.0'
+  gem 'rb-fsevent', require: false
+  gem 'growl'
 end
 
 group :development do
   gem 'spring'
+  gem 'guard-rspec'
 end
 
 # Use jquery as the JavaScript library
